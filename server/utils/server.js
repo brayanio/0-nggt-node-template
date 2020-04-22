@@ -23,7 +23,7 @@ const post = (path, fn) =>
   })
 
 //host www folder
-const WWW = __dirname.replace('utils', 'www')
+const WWW = __dirname.replace('server/utils', 'www')
 const resource = path => `${WWW}/${path}`
 app.use(express.static(WWW))
 app.get('*', (req, res) => res.sendFile(resource('index.html')))
