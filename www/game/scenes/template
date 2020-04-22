@@ -1,0 +1,16 @@
+import nggt from '../nggt.js'
+import Data from '../data/module.js'
+import Prefabs from '../prefabs/module.js'
+import GamePipe from '../pipes/game.js'
+
+export default () => nggt.create({
+  isRoot: true,
+  classList: ['game', 'gl-scene_mobile_pro'],
+  template: Prefabs.Card(
+    Prefabs.CardHeader(
+      Prefabs.DataObj(GamePipe.title, text => text)
+    ),
+    Prefabs.Btn(['gl-btn_icon'], 'Change Title', () => GamePipe.title.change('Works'))
+  ),
+  cleanup: () => GamePipe.cleanup()
+})

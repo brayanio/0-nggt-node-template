@@ -1,0 +1,27 @@
+@import url("../nggt/layout/styles/layout.css");
+@import url("../libs/glcss/styles/gl.css");
+@import url("./styles/game.css");
+/* @import url("../libs/sprite/styles/sprite.css"); */
+
+*{
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+html{
+  background-color: hsl(180, 10%, 30%);
+}
+
+body{
+  margin: 0;
+}
+
+hr{
+  border: 2px solid #ffffff40;
+  border-radius: 6px;
+}
+
+ul{
+  margin: 6px 0;
+  padding-left: 118px;
+}

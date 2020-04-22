@@ -1,0 +1,264 @@
+:root{
+/* media */
+  --xs: 800px;
+  --sm: 1000px;
+  --md: 1400px;
+  --lg: 1800px;
+
+/* colors */
+  --card-bg: #ffffff60;
+  --panel-bg: hsla(180, 10%, 30%, 60%);
+  /* alpha black */
+  --ab1: #00000006;
+  --ab2: #00000012;
+  --ab3: #00000018;
+  --ab4: #00000024;
+  --ab5: #00000030;
+  --ab6: #00000036;
+  --ab7: #00000042;
+  --ab8: #00000048;
+  --ab9: #00000054;
+  --ab10: #00000060;
+  --ab11: #00000066;
+  --ab12: #00000072;
+  --ab13: #00000078;
+  --ab14: #00000084;
+  --ab15: #00000090;
+  /* alpha white */
+  --aw1: #ffffff06;
+  --aw2: #ffffff12;
+  --aw3: #ffffff18;
+  --aw4: #ffffff24;
+  --aw5: #ffffff30;
+  --aw6: #ffffff36;
+  --aw7: #ffffff42;
+  --aw8: #ffffff48;
+  --aw9: #ffffff54;
+  --aw10: #ffffff60;
+  --aw11: #ffffff66;
+  --aw12: #ffffff72;
+  --aw13: #ffffff78;
+  --aw14: #ffffff84;
+  --aw15: #ffffff90;
+}
+
+.gl-scene_mobile, .gl-scene_mobile_pro{
+  transition: .3s;
+}
+
+@media screen and (min-width: 1000px){
+  .gl-scene_mobile{
+    padding: 2.5% 5%;
+    overflow-y: auto;
+    max-height: 95%;
+  }
+  .gl-scene_mobile_pro{
+    padding: 2.5% 5%;
+    overflow-y: auto;
+    max-height: 95%;
+  }
+
+  .gl-scene_mobile_pro .gl-modal{
+    margin: 2.5% 5%;
+    overflow-y: auto;
+    max-height: 95%;
+  }
+}
+
+@media screen and (min-width: 1400px){
+  .gl-scene_mobile{
+    padding: 2.5% 10%;
+    overflow-y: auto;
+    max-height: 95%;
+  }
+  .gl-scene_mobile_pro{
+    padding: 3% 10%;
+    overflow-y: auto;
+    max-height: 94%;
+    font-size: 1.1em;
+  }
+
+  .gl-scene_mobile_pro .gl-modal{
+    margin: 3% 10%;
+    overflow-y: auto;
+    max-height: 94%;
+  }
+}
+
+@media screen and (min-width: 1900px){
+  font-size: 1.3em;
+}
+
+/* Utils */
+
+.align{
+  display: flex;
+  align-items: center;
+}
+
+.right{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hidden{
+  display: none !important;
+}
+
+.space-between{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pad{
+  padding: 6px;
+}
+
+.pad_thick{
+  padding: 12px;
+}
+
+/* gl-panel */
+
+.gl-panel{
+  background-color: var(--aw6);
+  padding: 6px;
+  border-radius: 6px;
+  margin: 6px;
+  box-shadow: inset 0 0 6px var(--ab6);
+}
+
+.gl-panel_header{
+  background-color: var(--aw6);
+  font-size: 1.1em;
+  padding: 6px 12px;
+  margin: -6px -6px 6px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom: 1px solid var(--ab1);
+}
+
+.gl-panel > .gl-panel .gl-panel_header {
+  font-size: 1.05rem;
+  padding: 3px 6px;
+}
+
+/* gl-card */
+
+.gl-card{
+  background-color: var(--card-bg);
+  padding: 6px;
+  border-radius: 6px;
+  margin: 6px;
+  box-shadow: inset 0 0 6px var(--ab5);
+}
+
+.gl-card_header{
+  font-size: 1.1em;
+  padding: 6px;
+}
+
+/* gl-label */
+
+.gl-label{
+  display: block;
+  margin: 6px 0;
+}
+
+.gl-label span{
+  display: block;
+  padding-left: 5px;
+}
+
+.gl-label input{
+  display: block;
+  border-radius: 6px;
+  border: none;
+  box-shadow: 3px 5px 5px var(--aw3), 3px -5px -5px var(--aw1);
+  padding: 6px;
+  font-weight: bold;
+  font-size: 1em;
+  box-sizing: border-box;
+  background-color: var(--aw15);
+}
+
+.gl-label select{
+  display: block;
+  border-radius: 6px;
+  border: none;
+  box-shadow: 3px 5px 5px var(--aw3), 3px -5px -5px var(--aw1);
+  padding: 6px;
+  font-weight: bold;
+  font-size: 1em;
+  box-sizing: border-box;
+  background-color: var(--ab5);
+}
+
+
+@media screen and (min-width: 800px){ /* desktop */
+  .gl-label{
+    max-width: 16em;
+  }
+  
+  .gl-label input{
+    min-width: 16em;
+  }
+
+  .gl-label select{
+    min-width: 16em;
+  }
+}
+
+@media screen and (max-width: 1000px){ /* mobile */
+  
+  .gl-label input{  
+    width: 100%;
+  }
+
+  .gl-label select{
+    width: 100%;
+  }
+}
+
+/* gl-modal */
+
+.gl-modal_bg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--ab15);
+}
+
+.gl-modal{
+  background-color: hsl(180, 10%, 30%);
+  border-radius: 6px;
+  position: relative;
+  max-height: 95%;
+  margin: 2.5%;
+  padding: 0;
+}
+
+.gl-modal > * {
+  margin: 0;
+}
+
+/* gl-btn_icon */
+
+.gl-btn_icon {
+  border: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  background: var(--aw5);
+  box-shadow: inset 0 0 6px var(--ab1), 0 3px 5px var(--ab5);
+  border-radius: 6px;
+  padding: 3px 12px;
+  margin: 3px;
+  display: inline-flex;
+  align-content: center;
+  align-items: center;
+  vertical-align: middle;
+}
